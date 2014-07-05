@@ -8,6 +8,7 @@ class Bicycle
 	private String lights;
 	private int tirePressure = 25;
 	
+	//Create general constructor updating our light string so that it is not empty
 	public Bicycle()
 	{
 		updateLightString();
@@ -48,15 +49,11 @@ class Bicycle
 	}
 	
 	void increaseTirePressure(){
-		while(tirePressure < 25){
 			tirePressure++;
-		}
 	}
 	
 	void decreaseTirePressure(){
-		while(tirePressure > 25){
 			tirePressure--;
-		}
 	}
 	
 	void lightsOn()
@@ -75,7 +72,7 @@ class Bicycle
 	{
 		if(tirePressure < 20)
 		{
-			System.out.println("Put some air in your tires");
+			System.out.println("Put some air in the tires");
 		}
 		else if(tirePressure > 25)
 		{
@@ -87,6 +84,7 @@ class Bicycle
 		}
 	}
 	
+	//Update light string to either on or off depending on light state
 	private void updateLightString()
 	{
 		if(lightState == true){
@@ -98,11 +96,10 @@ class Bicycle
 	
 	void printStates()
 	{
-		System.out.print(
+		System.out.println(
 				"cadence: " + cadence + 
 				" speed: " + speed +
 				" gear: " + gear +
-				" lights: " + lights);
-		checkTirePressure();
+				" lights: " + lights + " ");
 	}
 }
